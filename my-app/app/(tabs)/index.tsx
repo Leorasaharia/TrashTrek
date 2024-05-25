@@ -4,7 +4,6 @@ import { ThemedView } from '@/components/ThemedView';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { Dimensions, Image, Modal, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
 export default function HomeScreen() {
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
@@ -33,9 +32,8 @@ export default function HomeScreen() {
           <TouchableOpacity onPress={() => navigation.navigate('Scan Me')}>
             <Text style={styles.linkText}>Scan Me</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Trivia Quiz')}>
-            <Text style={styles.linkText}>Trivia Quiz</Text>
-          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('TriviaQuiz')}> 
+      </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('Fun Fact')}>
             <Text style={styles.linkText}>Fun Fact</Text>
           </TouchableOpacity>
