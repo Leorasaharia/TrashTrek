@@ -23,9 +23,7 @@ export default function HomeScreen() {
       <ThemedView style={styles.headerContainer}>
         <Image source={require('@/assets/images/logo1.png')} style={styles.logo} />
         <View style={styles.linksContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-            <Text style={styles.linkText}>Home</Text>
-          </TouchableOpacity>
+
           <TouchableOpacity onPress={() => navigation.navigate('About')}>
             <Text style={styles.linkText}>About</Text>
           </TouchableOpacity>
@@ -120,8 +118,8 @@ const styles = StyleSheet.create({
     borderBottomColor: '#e2e8f0', // Light border color for separation
   },
   logo: {
-    height: 50,
-    width: 50,
+    height: 90,
+    width: 90,
   },
   linksContainer: {
     flexDirection: 'row',
