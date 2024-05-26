@@ -3,7 +3,8 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { Dimensions, Image, Modal, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Dimensions, Image, Linking, Modal, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+
 export default function HomeScreen() {
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
@@ -18,20 +19,24 @@ export default function HomeScreen() {
     { id: '4', src: require('@/assets/images/Designer (3).png') },
   ];
 
+  const handleTrashpediaPress = () => {
+    Linking.openURL('https://sites.google.com/view/trashtrek/home');
+  };
+
   return (
     <View style={styles.container}>
       <ThemedView style={styles.headerContainer}>
         <Image source={require('@/assets/images/logo1.png')} style={styles.logo} />
         <View style={styles.linksContainer}>
-
           <TouchableOpacity onPress={() => navigation.navigate('About')}>
             <Text style={styles.linkText}>About</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('Scan Me')}>
             <Text style={styles.linkText}>Scan Me</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('TriviaQuiz')}> 
-      </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('TriviaQuiz')}>
+            <Text style={styles.linkText}>Trivia Quiz</Text>
+          </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('FunFacts')}>
             <Text style={styles.linkText}>FunFacts</Text>
           </TouchableOpacity>
@@ -47,7 +52,7 @@ export default function HomeScreen() {
             </View>
           ))}
         </View>
-        <TouchableOpacity style={styles.trashpediaButton} onPress={() => setModalVisible(true)}>
+        <TouchableOpacity style={styles.trashpediaButton} onPress={handleTrashpediaPress}>
           <Text style={styles.buttonText}>Trashpedia</Text>
         </TouchableOpacity>
       </View>
