@@ -32,8 +32,8 @@ export default function HomeScreen() {
           </TouchableOpacity>
           <TouchableOpacity onPress={() => navigation.navigate('TriviaQuiz')}> 
       </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Fun Fact')}>
-            <Text style={styles.linkText}>Fun Fact</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('FunFacts')}>
+            <Text style={styles.linkText}>FunFacts</Text>
           </TouchableOpacity>
         </View>
       </ThemedView>

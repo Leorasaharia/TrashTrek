@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
   timer: {
     fontSize: 16,
     fontWeight: 'bold',
-    backgroundColor: 'yellow',
+    backgroundColor: 'mint',
     paddingVertical: 5,
     paddingHorizontal: 20,
     borderRadius: 5,
