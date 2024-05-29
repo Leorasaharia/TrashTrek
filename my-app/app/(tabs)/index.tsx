@@ -12,12 +12,17 @@ export default function HomeScreen() {
   const screenWidth = Dimensions.get('window').width;
   const imageSize = (screenWidth - 10) / 8; // Making the images very small
 
-  const images = [
-    { id: '1', src: require('@/assets/images/Designer.png') },
-    { id: '2', src: require('@/assets/images/Designer (1).png') },
-    { id: '3', src: require('@/assets/images/Designer (2).png') },
-    { id: '4', src: require('@/assets/images/Designer (3).png') },
-  ];
+  const images = [];
+
+  // Loop to generate image objects for remaining images
+  for (let i = 1; i <= 15; i++) {
+      const id = String(i);
+      const src = require(`@/assets/images/${i}.jpg`);
+      images.push({ id, src });
+  }
+  
+  console.log(images);
+  
 
   const handleTrashpediaPress = () => {
     Linking.openURL('https://sites.google.com/view/trashtrek/home');
@@ -111,16 +116,16 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#d2e7d6', // Light grayish blue background for the main body
+    backgroundColor: '#d2e7d6', 
   },
   headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: 30,
-    backgroundColor: '#1a202c', // Dark gray background for the header
+    backgroundColor: '#1a202c',
     borderBottomWidth: 5,
-    borderBottomColor: '#e2e8f0', // Light border color for separation
+    borderBottomColor: '#e2e8f0',
   },
   logo: {
     height: 90,
