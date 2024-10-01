@@ -17,3 +17,7 @@ Key Features:
 * Real-world impact through community cleanups
 
 TRASH TREK is more than just an app; it's a movement. Join the mission to clean up our planet, one piece of trash at a time!
+
+here's the link to trashpedia site : https://sites.google.com/view/trashtrek/home
+
+Trashpedia Extension (Android App)- Currently in development stage : https://youtube.com/shorts/ldErtSPmSNc
